@@ -6,7 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ContentProvider } from '../ContentContext';
 import theme from '../theme';
 import Layout from './Layout';
-import LoadingSpinner from './LoadingSpinner'; // New loading component
+import LoadingSpinner from './LoadingSpinner'; 
 
 // Lazy load route components
 const Dashboard = lazy(() => import('./Dashboard'));
@@ -16,7 +16,7 @@ const Publisher = lazy(() => import('./Publisher'));
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      suspense: true, // Enable React Query suspense mode
+      suspense: true,
     },
   },
 });
