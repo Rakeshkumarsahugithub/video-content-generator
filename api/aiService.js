@@ -166,7 +166,7 @@
 import axios from 'axios';
 
 const API_KEY = import.meta.env.VITE_OPENAI_KEY;
-const BASE_URL = 'https://api.deepseek.com/v1';
+const BASE_URL = 'https://api.deepseek.com/v1/chat/completions';
 
 const delay = (ms, jitter = 500) => 
   new Promise(resolve => setTimeout(resolve, ms + Math.random() * jitter));
@@ -225,7 +225,7 @@ export const generateVideoIdeas = async (prompt, options = {}) => {
   };
 
   const data = {
-    model: "gpt-4",
+    model: "deepseek-chat",
     messages: [
       {
         role: "system",
@@ -264,7 +264,7 @@ export const generateVideoIdeas = async (prompt, options = {}) => {
 
 export const generateVideoScript = async (idea, options = {}) => {
   const data = {
-    model: "gpt-4",
+    model: "deepseek-chat",
     messages: [
       {
         role: "system",
